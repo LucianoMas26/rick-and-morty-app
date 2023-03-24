@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import { useEffect } from "react"
 import { useState } from "react"
 import styles from "../Detail/Detail.module.css"
+import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 
 export default function Detail() {
   const { detailId } = useParams()
@@ -40,7 +41,10 @@ export default function Detail() {
           </div>
         </div>
       </div>
-      <button onClick={() => navigate(-1)}>go back</button>
+      <button className={styles.detailButton} onClick={() => navigate(-1)}>
+        <ArrowBackIcon className={styles.arrowIcon} />
+        Back
+      </button>
     </div>
   )
 }
