@@ -3,7 +3,7 @@
   width: 170px;
   height: 220px;
   margin: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease;
@@ -67,18 +67,34 @@
   display: block;
   opacity: 1;
 }
-
+.buttonFlex {
+  display: flex;
+  gap: 0.2rem;
+}
 .btn button {
   background: rgba(0, 0, 0, 0.7);
   color: white;
   border: none;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: all 0.5s ease;
+}
+.card .trashIcon {
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.card .heartIcon {
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.btn button:hover {
+  transform: scale(1.2);
 }
