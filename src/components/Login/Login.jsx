@@ -43,9 +43,9 @@ export default function Login() {
         <div className={styles.left}></div>
         <div className={styles.right}>
           <h2 className={styles.aboutTitle}>
-            Rick and Morty <span>App</span>
+            Rick and Morty <span>App </span>
           </h2>
-          <p>Bienvenido! Loguea en tu cuenta para ver mas del contenido:</p>
+          <p>Bienvenido! Loguea en tu cuenta para ver mas del contenido</p>
           <div className={styles.form}>
             <form onSubmit={handleSubmit}>
               <input
