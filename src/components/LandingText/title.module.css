@@ -1,0 +1,21 @@
+.title {
+  color: #e7ebe8;
+}
+.line {
+  width: 40%;
+}
+
+.btn {
+  color: white;
+  padding: 0.5rem;
+  width: 8rem;
+  background: #74c04a;
+  border: none;
+  border-radius: 0.2rem;
+  margin-top: 20px;
+}
+.btn:hover {
+  background: #1c641c;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}

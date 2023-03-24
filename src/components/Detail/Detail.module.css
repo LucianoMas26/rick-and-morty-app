@@ -1,0 +1,162 @@
+.blogCard {
+  transition: height 0.3s ease;
+  -webkit-transition: height 0.3s ease;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 7px -3px rgba(0, 0, 0, 0.3);
+  margin: 10rem auto 1.6%;
+  overflow: hidden;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.45em;
+  transition: all 0.5s ease-in-out;
+}
+
+.blogCard:hover {
+  transform: scale(1.05);
+}
+
+.blogCard.alt .details {
+  right: -100%;
+  left: inherit;
+}
+
+.blogCard .photo {
+  transform: skewX(-10deg);
+  transform-origin: 0 0;
+}
+.blogCard .photo img {
+  height: 200px;
+  position: relative;
+  background-size: contain;
+}
+
+.blogCard .description {
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+.flexDescription {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+.blogCard .description h1 {
+  line-height: 1em;
+  margin: 0 0 10px 0;
+}
+.blogCard .description h2 {
+  color: #9b9b9b;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+  margin: 1.2% 0;
+  margin-bottom: 1rem;
+}
+
+.blogCard .description p {
+  color: #9b9b9b;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 500;
+  margin: 1.2% 0;
+}
+
+.blogCard .story h2 {
+  font-weight: bold;
+}
+
+.blogCard alt .story h2 {
+  font-weight: bold;
+}
+
+.blogCard .description p {
+  position: relative;
+  margin: 0;
+  padding-top: 20px;
+}
+.blogCard .description p:after {
+  content: "";
+  background: #75d13b;
+  height: 6px;
+  width: 100px;
+  /*POSITION*/
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+.blogCard .description a {
+  color: #75d13b;
+  margin-bottom: 10px;
+  float: right;
+}
+.blogCard .description a:after {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  content: "\f061";
+  margin-left: -10px;
+  opacity: 0;
+  vertical-align: middle;
+}
+.blogCard .description a:hover:after {
+  margin-left: 5px;
+  opacity: 1;
+}
+.blogCard .description .story {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .blogCard {
+    height: 200px;
+    max-width: 600px;
+  }
+  .blogCard :hover .photo {
+    -webkit-transform: rotate(5deg) scale(1.3);
+    transform: rotate(5deg) scale(1.3);
+  }
+  .blogCard :hover.alt .photo {
+    -webkit-transform: rotate(-5deg) scale(1.3);
+    transform: rotate(-5deg) scale(1.3);
+  }
+  .blogCard .alt .description {
+    float: right;
+  }
+  .blogCard .alt .description:before {
+    -webkit-transform: skewX(5deg);
+    transform: skewX(5deg);
+    right: -15px;
+    left: inherit;
+  }
+  .blogCard .alt .photo {
+    float: right;
+  }
+  .blogCard .photo {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    float: left;
+    height: 100%;
+    width: 40%;
+  }
+  .blogCard .description {
+    float: left;
+    width: 60%;
+    z-index: 0;
+  }
+  .blogCard .description:before {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    content: "";
+    background: #fff;
+    width: 100%;
+    z-index: -1;
+    /*POSITION*/
+    position: absolute;
+    left: -15px;
+    top: 0;
+    bottom: 0;
+  }
+}
