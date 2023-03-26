@@ -6,6 +6,7 @@ import Login from "./components/Login/Login"
 import About from "./components/About/About"
 import Detail from "./components/Detail/Detail.jsx"
 import Error from "./components/Error404/Error"
+import Favorites from "./components/Favorites/Favorites.jsx"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route element={<Nav />}>
           <Route path="/home" element={<Landing />} />
           <Route path="/characters" element={<Characters />} />
+          <Route path="/Favorites" element={<Favorites />} />
           <Route path="/about" element={<About />} />
           <Route path="/detail/:detailId" element={<Detail />} />
         </Route>

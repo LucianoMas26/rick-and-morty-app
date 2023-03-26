@@ -5,32 +5,13 @@ import Modal from "../Modal/Modal"
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { addCharacter } from "../../redux/actions/actions"
+import searchId from "../../helpers/searchId"
 
 export default function Characters(props) {
   const [errorMessage, setErrorMessage] = useState("")
   const [showModal, setShowModal] = useState(false)
   const dispatch = useDispatch()
-  const state = useSelector((state) => state.characters)
-
-  function onSearch(id) {
-    fetch(`https://rickandmortyapi.com/api/character/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        const isCharacterExist = state.some(
-          (character) => character.id === data.id
-        )
-        if (!isCharacterExist) {
-          data.name
-            ? dispatch(addCharacter(data))
-            : showErrorModal("No se encontró el personaje")
-        } else {
-          showErrorModal(`El personaje "${data.name}" ya existe`)
-        }
-      })
-      .catch(() => {
-        showErrorModal("Ocurrió un error al buscar el personaje")
-      })
-  }
+  const state = useSelector((state) => state.reducerCharacter.characters)
 
   function showErrorModal(message) {
     setErrorMessage(message)
@@ -46,11 +27,12 @@ export default function Characters(props) {
       <div className={styles.flex}>
         <div>
           <h1 className={styles.characters}>Characters Selection</h1>
-          <div>
-            <hr />
-          </div>
         </div>
-        <SearchBar onSearch={onSearch} />
+        <SearchBar
+          onSearch={(id) =>
+            searchId(id, state, dispatch, showErrorModal, addCharacter)
+          }
+        />
       </div>
       <div className={styles.grid}>
         <Cards characters={state} />
@@ -59,18 +41,3 @@ export default function Characters(props) {
     </div>
   )
 }
-// export const mapDispatchToProps = (dispatch) => {
-//   return {
-//     addCharacter: function (character) {
-//       console.log(character)
-//       dispatch(addCharacter(character))
-//     },
-//     removeCharacter: function (name) {
-//       dispatch(removeCharacter(name))
-//     }
-//   }
-// }
-// export const mapStateToProps = (state) => ({
-//   characters: state.characters
-// })
-// export default connect(mapStateToProps, mapDispatchToProps)(Characters)

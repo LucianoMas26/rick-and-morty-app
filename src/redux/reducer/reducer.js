@@ -18,6 +18,7 @@ const reducerCharacter = (state = initialState, action) => {
           (element) => element.name !== action.payload
         )
       }
+
     default:
       return state
   }
