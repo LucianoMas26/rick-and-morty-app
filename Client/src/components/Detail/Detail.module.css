@@ -1,0 +1,156 @@
+section.card {
+  background: #f6f6f6;
+  border-radius: 24px 24px 24px 48px;
+  padding: 48px 48px 48px 308px;
+  margin: 54px 10rem;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  position: relative;
+  box-shadow: 5px 0 0 0 rgba(204, 204, 204, 0.3),
+    -5px 0 0 0 rgba(204, 204, 204, 0.3), 0 5px 0 0 rgba(204, 204, 204, 0.3);
+}
+
+section.card:nth-of-type(odd) {
+  border-radius: 24px 24px 48px 24px;
+  padding: 48px 308px 48px 60px;
+}
+
+section.card .textContent {
+  display: flex;
+  flex-direction: column;
+  width: calc(60vw - 192px);
+}
+
+section.card .textContent h3 {
+  margin: 0;
+  font-size: 1.8em;
+  max-width: 20ch;
+  color: #74c04a;
+}
+
+section.card .textContent p {
+  margin: 16px 0 16px;
+  max-width: 36ch;
+}
+
+.buttonDetail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: white;
+  padding: 0.5rem;
+  width: 8rem;
+  background: #74c04a;
+  border: none;
+  border-radius: 0.2rem;
+  margin-top: 20px;
+}
+.buttonDetail:hover {
+  background: #1c641c;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+section.card .visual {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  top: -24px;
+  left: 24px;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 1px 2px 6px rgba(255, 255, 255, 0.25),
+    2px 6px 12px rgba(0, 0, 0, 0.25);
+  margin: auto;
+}
+
+section.card .visual img {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section.card:nth-of-type(odd) .visual {
+  right: 24px;
+  left: auto;
+}
+
+section.card:nth-of-type(odd) .text-content a {
+  align-self: flex-start;
+}
+
+.detailBody {
+  margin: 0;
+  padding: 96px;
+  font-size: 21px;
+  color: #000;
+  font-family: "gelica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@media all and (max-width: 1100px) {
+  .detailBody {
+    padding: 96px 48px 24px;
+  }
+  .article {
+    width: 70%;
+    max-width: 70%;
+    min-width: 70%;
+  }
+  section.card {
+    width: 70%;
+    max-width: 70%;
+    min-width: 70%;
+  }
+  section.card .textContent {
+    width: 100%;
+  }
+  section.card:nth-of-type(odd) {
+    margin: 0;
+  }
+}
+@media all and (max-width: 720px) {
+  .detailBody {
+    padding: 48px 24px 0;
+  }
+  section.card {
+    margin: 64px 0;
+    padding: 88px 36px 36px;
+    flex-direction: column;
+    border-radius: 24px;
+  }
+  section.card:nth-of-type(odd) {
+    padding: 88px 36px 36px;
+    border-radius: 24px;
+  }
+  section.card .textContent h3 {
+    max-width: calc(100% - 150px);
+    font-size: 1em;
+  }
+  section.card .textContent p,
+  section.card .textContent a {
+    font-size: 0.8em;
+  }
+  section.card .visual,
+  section.card:nth-of-type(odd) .visual {
+    width: 150px;
+    height: 150px;
+    right: 16px;
+    left: auto;
+  }
+  section.card .visual img,
+  section.card:nth-of-type(odd) .visual img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
