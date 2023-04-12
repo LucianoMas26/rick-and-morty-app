@@ -28,7 +28,7 @@ export default function Card(props) {
         setIsFav(true)
       }
     })
-  }, [state])
+  }, [state, props.id])
 
   return (
     <div className={"animate__animated animate__fadeInRight "}>

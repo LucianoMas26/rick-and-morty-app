@@ -29,8 +29,8 @@ export default function Detail() {
             <h3>The character choosen is {character.name}</h3>
             <p>Currently {character.status}.</p>
             <p>
-              He is a {character.gender} {character.species} born on{" "}
-              {character.origin?.name} in the location of{" "}
+              He is a {character.gender} {character.species} born on
+              {character.origin?.name} in the location of
               {character.location?.name}.
             </p>
             <button

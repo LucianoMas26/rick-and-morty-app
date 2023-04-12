@@ -16,7 +16,6 @@ export default function Login() {
       ...form,
       [e.target.name]: e.target.value
     })
-    console.log(form)
   }
 
   const handleSubmit = (e) => {
@@ -31,7 +30,7 @@ export default function Login() {
 
   useEffect(() => {
     !access && navigate("/")
-  }, [access])
+  }, [access, navigate])
 
   useEffect(() => {
     setFormComplete(form.email && form.password)

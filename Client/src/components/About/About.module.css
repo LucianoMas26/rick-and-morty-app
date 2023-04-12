@@ -95,6 +95,7 @@
   box-shadow: 1px 1px 10px 0px #2222222b;
   transition: 0.2s all;
   border-radius: 10px;
+  margin-top: 1rem;
 }
 .aboutContent button:hover {
   background: #1c641c;

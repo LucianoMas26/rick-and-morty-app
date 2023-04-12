@@ -2,7 +2,7 @@ section.card {
   background: #f6f6f6;
   border-radius: 24px 24px 24px 48px;
   padding: 48px 48px 48px 308px;
-  margin: 54px 10rem;
+  margin: 54px 8rem;
   display: flex;
   flex-direction: row;
   align-self: center;
@@ -54,7 +54,7 @@ section.card .textContent p {
 }
 
 section.card .visual {
-  width: 240px;
+  width: 300px;
   height: 100%;
   position: absolute;
   top: -24px;

@@ -9,11 +9,11 @@ export default function SearchBar(props) {
   }
 
   return (
-    <div>
+    <div className="flex gap-3 items-center">
       <input
         type="search"
         onChange={handleInput}
-        className={styles["search-input"]}
+        className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md h-[1.2rem] sm:text-sm"
       />
       <button
         onClick={() => props.onSearch(id)}

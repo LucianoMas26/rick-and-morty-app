@@ -1,5 +1,5 @@
 import styles from "../About/About.module.css"
-export default function () {
+export default function About() {
   return (
     <div className="animate__animated animate__fadeIn">
       <div className={styles.aboutContainer}>

@@ -2,9 +2,10 @@ import {
   ADD_CHARACTER,
   REMOVE_CHARACTER,
   ADD_FAVORITES,
-  DELETE_FAVORITES
+  DELETE_FAVORITES,
+  GENDER_FILTER,
+  ORDER_FILTER
 } from "./actionTypes"
-import axios from "axios"
 
 export const addCharacter = (character) => {
   return {
@@ -31,5 +32,17 @@ export const deleteFavorite = (id) => {
   return {
     type: DELETE_FAVORITES,
     payload: id
+  }
+}
+export const filterByGender = (gender) => {
+  return {
+    type: GENDER_FILTER,
+    payload: gender
+  }
+}
+export const filterByOrder = (order) => {
+  return {
+    type: ORDER_FILTER,
+    payload: order
   }
 }
