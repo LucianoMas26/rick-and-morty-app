@@ -7,7 +7,7 @@ import OrderFilter from "../OrderFilter/OrderFilter"
 
 export default function Favorite() {
   const state = useSelector((state) => state.myFavoritesReducer.myFavorites)
-
+  console.log(state)
   return (
     <div className={stylesCharacter.container}>
       <div className={stylesCharacter.flex}>

@@ -15,17 +15,26 @@ const myFavoritesReducer = (state = initialState, actions) => {
     case ADD_FAVORITES:
       return {
         ...state,
-        allCharacters: [...state.allCharacters, actions.payload],
-        myFavorites: [...state.allCharacters, actions.payload]
+        myFavorites: actions.payload,
+        allCharacters: actions.payload
       }
+    // return {
+    //   ...state,
+    //   allCharacters: [...state.allCharacters, actions.payload],
+    //   myFavorites: [...state.allCharacters, actions.payload]
+    // }
     case DELETE_FAVORITES:
-      const filteredList = state.myFavorites.filter(
-        (e) => e.id !== actions.payload
-      )
       return {
         ...state,
-        myFavorites: filteredList
+        myFavorites: actions.payload
       }
+    // const filteredList = state.myFavorites.filter(
+    //   (e) => e.id !== actions.payload
+    // )
+    // return {
+    //   ...state,
+    //   myFavorites: filteredList
+    // }
     case GENDER_FILTER:
       const filterByGender = [...state.allCharacters].filter(
         (character) =>
