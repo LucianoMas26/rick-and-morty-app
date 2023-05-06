@@ -1,5 +1,6 @@
-const { postFav, deleteFav } = require("./handleFavorites")
 const getCharById = require("./getCharById")
+const postUser = require("./postUser")
 const login = require("./login")
-
-module.exports = { login, postFav, deleteFav, getCharById }
+const postFav = require("./postFav")
+const deleteFav = require("./deleteFav")
+module.exports = { getCharById, postUser, login, postFav, deleteFav }

@@ -16,7 +16,7 @@ function App() {
         <Route element={<Nav />}>
           <Route path="/home" element={<Landing />} />
           <Route path="/characters" element={<Characters />} />
-          <Route path="/Favorites" element={<Favorites />} />
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="/about" element={<About />} />
           <Route path="/detail/:detailId" element={<Detail />} />
         </Route>

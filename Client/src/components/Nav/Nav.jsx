@@ -45,7 +45,7 @@ export default function Nav() {
               </li>
               <li>
                 <NavLink
-                  to="/Favorites"
+                  to="/favorites"
                   className={({ isActive }) =>
                     isActive ? styles.activeClass : { color: "#93a8b4" }
                   }
