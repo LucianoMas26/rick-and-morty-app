@@ -6,16 +6,11 @@ module.exports = (sequelize) => {
     {
       id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
       },
       name: {
         type: DataTypes.STRING,
-        allowNull: false
-      },
-      status: {
-        type: DataTypes.ENUM,
-        values: ["Alive", "Dead", "unknown"],
         allowNull: false
       },
       species: {
@@ -27,10 +22,7 @@ module.exports = (sequelize) => {
         values: ["Female", "Male", "Genderless", "unknown"],
         allowNull: false
       },
-      origin: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
+
       image: {
         type: DataTypes.STRING,
         allowNull: false
