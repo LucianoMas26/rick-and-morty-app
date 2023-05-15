@@ -7,7 +7,7 @@ const { conn } = require("./DB_connection")
 server.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://rick-and-morty-app-production-98fa.up.railway.app"
+    "https://rick-and-morty-app-production-98fa.up.railway.app/rickandmorty"
   )
   res.header("Access-Control-Allow-Credentials", "true")
   res.header(
