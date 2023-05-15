@@ -5,7 +5,7 @@ export default function onSearch(
   showErrorModal,
   addCharacter
 ) {
-  fetch(`http://localhost:3001/rickandmorty/character/${id}`)
+  fetch(`rick-and-morty-app-production-98fa.up.railway.app/character/${id}`)
     .then((res) => res.json())
     .then((data) => {
       const isCharacterExist = state.some(
