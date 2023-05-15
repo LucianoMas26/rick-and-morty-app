@@ -1,6 +1,7 @@
 const express = require("express")
 const server = express()
-const PORT = 3001
+require("dotenv").config()
+const { PORT } = process.env
 const router = require("./routes/index")
 const { conn } = require("./DB_connection")
 server.use((req, res, next) => {
