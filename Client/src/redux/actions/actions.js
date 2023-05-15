@@ -29,7 +29,8 @@ export const removeCharacter = (name) => {
 // }
 
 export const addFavorites = (character) => {
-  const endpoint = "http://localhost:3001/rickandmorty/fav"
+  const endpoint =
+    "https://rick-and-morty-app-production-98fa.up.railway.app/rickandmorty/fav"
   return (dispatch) => {
     axios.post(endpoint, character).then(({ data }) => {
       return dispatch({
@@ -48,7 +49,7 @@ export const addFavorites = (character) => {
 // }
 
 export const deleteFavorite = (id) => {
-  const endpoint = `http://localhost:3001/rickandmorty/fav/${id}`
+  const endpoint = `https://rick-and-morty-app-production-98fa.up.railway.app/rickandmorty/fav/${id}`
   return (dispatch) => {
     axios.delete(endpoint).then(({ data }) => {
       return dispatch({
