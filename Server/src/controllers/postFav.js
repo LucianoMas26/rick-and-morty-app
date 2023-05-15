@@ -2,7 +2,6 @@ const { Favorite } = require("../DB_connection")
 
 const postFav = async (req, res) => {
   const { id, name, gender, species, image } = req.body
-  console.log(req.body)
   if (!name || !gender || !species || !image) {
     return res.status(401).json({ message: "Faltan datos" })
   }
