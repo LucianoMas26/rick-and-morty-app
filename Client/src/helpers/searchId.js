@@ -6,7 +6,7 @@ export default function onSearch(
   addCharacter
 ) {
   fetch(
-    `rick-and-morty-app-production-98fa.up.railway.app/rickandmorty/character/${id}`
+    `https://rick-and-morty-app-production-98fa.up.railway.app/rickandmorty/character/${id}`
   )
     .then((res) => res.json())
     .then((data) => {
