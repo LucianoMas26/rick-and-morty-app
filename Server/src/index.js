@@ -5,10 +5,7 @@ const { PORT } = process.env
 const router = require("./routes/index")
 const { conn } = require("./DB_connection")
 server.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://rick-and-morty-app-production-98fa.up.railway.app/rickandmorty"
-  )
+  res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Credentials", "true")
   res.header(
     "Access-Control-Allow-Headers",
