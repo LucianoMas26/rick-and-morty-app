@@ -11,7 +11,7 @@ export default function Nav() {
   }
 
   return (
-    <>
+    <div>
       <nav className={styles.navbar}>
         <div className={styles.logo}>
           <div className="title">
@@ -78,6 +78,6 @@ export default function Nav() {
         </div>
       </nav>
       <Outlet />
-    </>
+    </div>
   )
 }

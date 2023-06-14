@@ -20,7 +20,6 @@ export default function Detail() {
         window.alert("No hay personajes con ese ID")
       })
   }, [detailId])
-  console.log(character)
   return (
     <div className={styles.detailBody}>
       <div className={styles.article}>
